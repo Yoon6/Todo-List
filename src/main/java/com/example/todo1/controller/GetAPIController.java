@@ -1,11 +1,30 @@
 package com.example.todo1.controller;
 
 import com.example.todo1.model.Element;
+import com.example.todo1.service.ElementService;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
-@RequestMapping("/api")// localhost:8080/api
+import java.util.List;
+
+@Controller
 public class GetAPIController {
+
+    private final ElementService elementService;
+
+    public GetAPIController(ElementService elementService) {
+        this.elementService = elementService;
+    }
+
+
+//    @GetMapping("/")
+//    public String list(Model model) {
+//        List<Element> elements = elementService.findAll();
+//        model.addAttribute("elements", elements);
+//
+//        return "home";
+//    }
 
     // localhost:8080/api/getRequest
     @RequestMapping(method = RequestMethod.GET, path = "/getRequest")
