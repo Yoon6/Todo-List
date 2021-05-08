@@ -21,16 +21,6 @@ public class PostAPIController {
         return element;
     }
 
-    @PostMapping("/addElement")
-    public String addElement(ElementForm form) {
-
-        Element element = new Element();
-        element.setContent(form.getContent());
-
-        elementService.save(element);
-
-        return "redirect:/";
-    }
 
     @PostMapping(value = "/postMapping")
     public Element postMapping(@RequestBody Element element) {
