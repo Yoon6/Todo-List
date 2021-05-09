@@ -28,4 +28,8 @@ public class ElementService {
         return jpaElementRepository.findAll();
     }
 
+    public void deleteById(Long id) {
+        jpaElementRepository.deleteById(id);
+    }
+
 }

@@ -30,6 +30,13 @@
                 <tr th:each="element : ${elements}">
                     <td th:text="${element.id}"></td>
                     <td th:text="${element.content}"></td>
+                    <td>
+                        <form id="delete-form" th:action="@{'/delete/' + ${element.id}}" method="post">
+                            <input type="hidden" name="_method" value="delete"/>
+                            <button id="delete-btn">삭제</button>
+                        </form>
+                    </td>
+
                 </tr>
                 </tbody>
             </table>
