@@ -33,4 +33,12 @@ public class JpaElementRepository implements ElementRepository {
         return em.createQuery("select m from Element m", Element.class)
                 .getResultList();
     }
+
+    @Override
+    public void deleteById(Long id) {
+        em.createQuery("delete from Element e where e.id = :id")
+                .setParameter("id", id)
+                .executeUpdate();
+
+    }
 }

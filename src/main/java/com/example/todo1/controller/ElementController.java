@@ -4,10 +4,7 @@ import com.example.todo1.model.Element;
 import com.example.todo1.service.ElementService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +19,7 @@ public class ElementController {
 
     // 시작페이지
     @GetMapping("/")
-    public String home(Model model){
+    public String home(Model model) {
 
         List<Element> elements = elementService.findAll();
         model.addAttribute("elements", elements);
@@ -42,4 +39,11 @@ public class ElementController {
         return "redirect:/";
     }
 
+    @DeleteMapping("/delete/{id}")
+    public String deleteElement(ElementForm form) {
+
+        elementService.deleteById(form.getId());
+
+        return "redirect:/";
+    }
 }

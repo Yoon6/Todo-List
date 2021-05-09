@@ -11,4 +11,6 @@ public interface ElementRepository {
     Optional<Element> findById(Long id);
 
     List<Element> findAll();
+
+    void deleteById(Long id);
 }
