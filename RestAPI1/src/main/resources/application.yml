@@ -1,0 +1,18 @@
+server:
+  address: localhost
+  port: 8080
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/todo2?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 1376
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: true

@@ -1,10 +1,10 @@
-package com.example.todo1;
+package com.yoon.restapi1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Todo1ApplicationTests {
+class RestApi1ApplicationTests {
 
     @Test
     void contextLoads() {
