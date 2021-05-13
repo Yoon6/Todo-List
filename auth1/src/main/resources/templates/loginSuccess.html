@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Success</title>
+</head>
+<body>
+    <h1>success!</h1>
+    <hr>
+
+    <p>
+        <span sec:authentication="name"></span>님 환영합니다.
+    </p>
+
+    <a th:href="@{'/'}">메인으로 이동</a>
+</body>
+</html>
