@@ -2,9 +2,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/todo1?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/auth1?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
-    password: 1376
+    password: 1111
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
