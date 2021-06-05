@@ -4,7 +4,6 @@ spring:
     url: jdbc:mysql://localhost:3306/todo2?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 1376
-
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     open-in-view: false
@@ -12,14 +11,12 @@ spring:
     hibernate:
       format_sql: true
 #      create 마다 초기화
-#      ddl-auto: create
+      ddl-auto: create
 #  delete, put 메소드 사용
   mvc:
     hiddenmethod:
       filter:
         enabled: true
-
-
 logging:
   level:
     org:
@@ -29,3 +26,5 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
+server:
+  port: 80
